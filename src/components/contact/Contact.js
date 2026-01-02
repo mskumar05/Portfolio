@@ -4,9 +4,9 @@ import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 
 
-const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_onnvynq";
-const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_cep73de";
-const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "r9_XYNfkCpxvgWyhM";
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const Contact = () =>{ 
   const [username, setUsername] = useState("");
