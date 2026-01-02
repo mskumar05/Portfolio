@@ -1,11 +1,19 @@
 [build]
+  # Build command
   command = "npm run build"
+
+  # Publish directory
   publish = "build"
 
+# Production environment variables
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+  # Exclude client-side env vars from secrets scanning (these are bundled into JS and meant to be public)
+  SECRETS_SCAN_OMIT_KEYS = "REACT_APP_EMAILJS_PUBLIC_KEY,REACT_APP_EMAILJS_SERVICE_ID,REACT_APP_EMAILJS_TEMPLATE_ID,REACT_APP_GROQ_API_KEY"
+
+# Redirect rules for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[build.environment]
-  NODE_VERSION = "16"
